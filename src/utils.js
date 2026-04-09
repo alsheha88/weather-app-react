@@ -3,21 +3,21 @@ export function weatherImage(weatherCode) {
 
 	switch (weatherCode) {
 		case 0:
-			image = "/icon-sunny.webp";
+			image = `${import.meta.env.BASE_URL}icon-sunny.webp`;
 			break;
 		case 1:
 		case 2:
 		case 3:
-			image = "/icon-overcast.webp";
+			image = `${import.meta.env.BASE_URL}icon-overcast.webp`;
 			break;
 		case 45:
 		case 48:
-			image = "/icon-fog.webp";
+			image = `${import.meta.env.BASE_URL}icon-fog.webp`;
 			break;
 		case 51:
 		case 53:
 		case 55:
-			image = "/icon-drizzle.webp";
+			image = `${import.meta.env.BASE_URL}icon-drizzle.webp`;
 			break;
 		case 56:
 		case 57:
@@ -29,7 +29,7 @@ export function weatherImage(weatherCode) {
 		case 80:
 		case 81:
 		case 82:
-			image = "/icon-rain.webp";
+			image = `${import.meta.env.BASE_URL}icon-rain.webp`;
 			break;
 		case 71:
 		case 73:
@@ -37,12 +37,12 @@ export function weatherImage(weatherCode) {
 		case 77:
 		case 85:
 		case 86:
-			image = "/icon-snow.webp";
+			image = `${import.meta.env.BASE_URL}icon-snow.webp`;
 			break;
 		case 95:
 		case 96:
 		case 99:
-			image = "/icon-storm.webp";
+			image = `${import.meta.env.BASE_URL}icon-storm.webp`;
 			break;
 		default:
 	}
