@@ -1,5 +1,6 @@
 import errorImg from "../assets/icon-error.svg";
 import retryImg from "../assets/icon-retry.svg";
+import { useContext } from "react";
 
 const ErrorPage = () => {
 	const { retry } = useContext(WeatherContext);
