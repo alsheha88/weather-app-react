@@ -13,9 +13,9 @@ const SearchBar = () => {
 		userLocation,
 		setDefaultCity,
 		setIsLoading,
+		setClickValue
 	} = useContext(WeatherContext);
 	const [cities, setCities] = useState(null);
-	const [clickValue, setClickValue] = useState(null);
 
 	function handleChange(e) {
 		const { value } = e.target;

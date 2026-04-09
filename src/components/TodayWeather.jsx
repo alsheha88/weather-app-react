@@ -4,7 +4,7 @@ import WeatherContent from "../WeatherContent";
 import { WeatherContext } from "../context/WeatherContext";
 
 const TodayWeather = ({ day, location, temperature }) => {
-	const { data, defaultCity, isLoading } = useContext(WeatherContext);
+	const { data, defaultCity, isLoading, clickValue } = useContext(WeatherContext);
 	if (!data) return null;
 	if (!defaultCity) return null
 
@@ -19,7 +19,7 @@ const TodayWeather = ({ day, location, temperature }) => {
 					</p>
 				) : (
 					<h2 className="font-bold text-[28px] text-neutral-0 text-center">
-						{location
+						{clickValue && location
 							? `${location.name}, ${location.country}`
 							: `${defaultCity.city}, ${defaultCity.country}`}
 					</h2>
@@ -27,7 +27,7 @@ const TodayWeather = ({ day, location, temperature }) => {
 				<p className="text-lg text-neutral-0 text-center">{day}</p>
 			</div>
 			<div className="flex gap-5 items-center justify-center">
-				<img src={image} alt="" className="w-30" />
+				<img src={image} alt="current temperature" className="w-30" />
 				<h2 className="text-6xl text-neutral-0 font-semibold italic text-center md:text-5xl">
 					{temperature.toFixed(0)} <sup>o</sup>
 				</h2>
