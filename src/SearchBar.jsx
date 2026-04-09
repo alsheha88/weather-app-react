@@ -88,8 +88,8 @@ const SearchBar = () => {
 	function handleClick() {
 		setClickValue(inputValue);
 		setCoordinates({
-			lat: userLocation.latitude,
-			long: userLocation.longitude,
+			lat: userLocation && userLocation.latitude,
+			long: userLocation && userLocation.longitude,
 		});
 	}
 

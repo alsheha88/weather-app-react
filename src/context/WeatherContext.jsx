@@ -44,7 +44,7 @@ export function WeatherProvider({ children }) {
 			}
 		};
 		fetchData();
-	}, [coordinates, units]);
+	}, [coordinates, units, retryCount]);
 
 	return (
 		<WeatherContext.Provider

@@ -18,7 +18,7 @@ const HourlyForecast = () => {
 	});
 	const day = new Date().toLocaleDateString("en-US", { weekday: "long" });
 
-	const today = getLocalTime(data.utc_offset_seconds, new Date)
+	const today = getLocalTime(data.utc_offset_seconds, new Date())
 
 	const todayIndex = data?.hourly?.time.indexOf(today);
 	const dateSelected =
